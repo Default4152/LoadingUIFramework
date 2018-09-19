@@ -10,12 +10,20 @@ import UIKit
 import LoadingUI
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let loadingView = LoadingViewController()
+        loadingView.startAnimation()
+        add(loadingView)
     }
-
-
+    
 }
 
+extension UIViewController {
+    func add(_ child: UIViewController) {
+        addChild(child)
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+    }
+}

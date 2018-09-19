@@ -10,6 +10,8 @@
 		1372016E2152E91200F3D26E /* LoadingUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137201642152E91200F3D26E /* LoadingUI.framework */; };
 		137201732152E91200F3D26E /* LoadingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137201722152E91200F3D26E /* LoadingUITests.swift */; };
 		137201752152E91200F3D26E /* LoadingUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 137201672152E91200F3D26E /* LoadingUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		137201BA2152EDBE00F3D26E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137201B92152EDBE00F3D26E /* LoadingViewController.swift */; };
+		137201BC2152F2B500F3D26E /* IndeterminateLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137201BB2152F2B500F3D26E /* IndeterminateLoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		1372016D2152E91200F3D26E /* LoadingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoadingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		137201722152E91200F3D26E /* LoadingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingUITests.swift; sourceTree = "<group>"; };
 		137201742152E91200F3D26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		137201B92152EDBE00F3D26E /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		137201BB2152F2B500F3D26E /* IndeterminateLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndeterminateLoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				137201672152E91200F3D26E /* LoadingUI.h */,
 				137201682152E91200F3D26E /* Info.plist */,
+				137201B92152EDBE00F3D26E /* LoadingViewController.swift */,
+				137201BB2152F2B500F3D26E /* IndeterminateLoadingView.swift */,
 			);
 			path = LoadingUI;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					137201632152E91200F3D26E = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					1372016C2152E91200F3D26E = {
 						CreatedOnToolsVersion = 10.0;
@@ -194,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137201BA2152EDBE00F3D26E /* LoadingViewController.swift in Sources */,
+				137201BC2152F2B500F3D26E /* IndeterminateLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +350,7 @@
 		137201792152E91200F3D26E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Conner.Lambda.LoadingUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +376,7 @@
 		1372017A2152E91200F3D26E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +401,7 @@
 		1372017C2152E91200F3D26E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LoadingUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +419,7 @@
 		1372017D2152E91200F3D26E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LoadingUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
